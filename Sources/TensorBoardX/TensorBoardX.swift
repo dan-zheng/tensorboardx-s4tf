@@ -31,7 +31,7 @@ public class SummaryWriter {
     var writer: PythonObject
     
     public init(logdir: URL, suffix: String = "", flushSecs: Int = 120) {
-        self.writer = tbx.SummaryWriter(logdir.path)
+        self.writer = tbx.SummaryWriter(logdir.path, flush_secs: flushSecs, filename_suffix: suffix)
     }
     
     /// Flush.
